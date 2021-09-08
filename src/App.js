@@ -1,25 +1,58 @@
-import logo from './logo.svg';
 import './App.css';
+import { ThemeProvider } from '@material-ui/core/styles';
+import Header from "./components/header/index"
+import React from 'react';
+// import darkTheme from './theme';
+import { createTheme } from "@material-ui/core";
+import {Switch,Route} from "react-router-dom"
+import {
+    blueGrey,
+    lightBlue,
+    deepPurple,
+    deepOrange
+  } from "@material-ui/core/colors";
+import AddNewRecord from './Froms/ClientDictionary/AddNewRecord';
+
 
 function App() {
+  
+  const [darkState, setDarkState] = React.useState(false);
+  
+  const palletType = darkState ? "dark" : "light";
+  const mainPrimaryColor = darkState ? blueGrey[500] : lightBlue[500];
+  const mainSecondaryColor = darkState ? deepOrange[900] : deepPurple[500];
+  const darkTheme = createTheme({
+    palette: {
+      type: palletType,
+      primary: {
+        main: mainPrimaryColor
+      },
+      secondary: {
+        main: mainSecondaryColor
+      }
+    }
+  });
+
+  function toggleDarkState() {
+
+    setDarkState(!darkState);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+        <Header darkState={darkState} toggleDarkState={toggleDarkState} />
+        {/* <LeftSlide /> */}
+      <div className="App">
+       <Switch>
+         <Route exact path="/" >
+           New Screen
+         </Route>
+         <Route  path="/client-dictionary" component={AddNewRecord} />
+       </Switch>
+      </div>
+    </ThemeProvider>
   );
 }
+
 
 export default App;
