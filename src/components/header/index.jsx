@@ -123,7 +123,7 @@ const useStyles = makeStyles((theme) =>
       },
       secondSideBar:{
     position: "absolute",
-    zIndex:"1",
+    zIndex:"10",
     backgroundColor: "#F6F6F6",
     height: "100vh",
     width:"300px",
@@ -289,7 +289,7 @@ const handleTabChange=(value)=>{
               </ListItemIcon>
               <ListItemText primary="Interface menu"/>
             </ListItem >
-            <ListItem button  onClick={(e)=>handleTabChange(10)} >
+            <ListItem button  onClick={(e)=>handleTabChange(121)} >
               <ListItemIcon>
              <InboxIcon /> 
               </ListItemIcon>
@@ -310,7 +310,7 @@ const handleTabChange=(value)=>{
     </div>
     <div  className={clsx(classes.secondSideBar,{[classes.onOpen]:open})}>
       {/* <SwitchLogic checkValue={1} />  */}
-      <SwitchLogic checkValue={tabValue} /> 
+      <SwitchLogic  checkValue={tabValue} handleTabChange={handleTabChange} /> 
       </div>
       </>
     )

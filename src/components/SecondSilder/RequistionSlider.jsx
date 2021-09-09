@@ -3,16 +3,16 @@ import React from 'react'
 import MailIcon from '@material-ui/icons/Mail';
 import {Link} from "react-router-dom"
 
-export default function SystemDictionary({handleTabChange}) {
+export default function RequistionSlider() {
     return (
         <div>
-             <List>
-                 <Link to="/" onClick={(e)=>handleTabChange(121)} style={{ textDecoration: 'none',color:'black' }} >
+            <List>
+                 <Link style={{ textDecoration: 'none',color:'black' }} to="/client-dictionary">
              <ListItem  button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText   primary="Client Dictionary"/>
+              <ListItemText   primary="Add New Requistion"/>
               </ListItem>
                  </Link>
                  <Link style={{ textDecoration: 'none',color:"black" }} to="/">
@@ -20,88 +20,64 @@ export default function SystemDictionary({handleTabChange}) {
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Test Dictionary"/>
+              <ListItemText primary="Request entry from remote orders"/>
               </ListItem>
                  </Link>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Profile Dictionary"/>
+              <ListItemText primary="Fast Requistion Entry"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Test/Profile comments"/>
+              <ListItemText primary="Modify Existing Requistion "/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Canned comments"/>
+              <ListItemText primary="Delete a Requistion"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Reports Format File"/>
+              <ListItemText primary="List of Requistion"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Worksheet setup"/>
+              <ListItemText primary="Log Menu"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Insurance Dictionary"/>
+              <ListItemText primary="Scan Received Sample"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Laboratory Information"/>
+              <ListItemText primary="Check for Missing Info"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Program Password File"/>
+              <ListItemText primary="End of Day Processing"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="User/Tech Password"/>
+              <ListItemText primary="QC Order Entry"/>
               </ListItem>
-             <ListItem button >
-              <ListItemIcon>
-              <MailIcon />
-              </ListItemIcon>
-              <ListItemText primary="Automated billing tests"/>
-              </ListItem>
-             <ListItem button >
-              <ListItemIcon>
-              <MailIcon />
-              </ListItemIcon>
-              <ListItemText primary="Special Billing Translation"/>
-              </ListItem>
-             <ListItem button >
-              <ListItemIcon>
-              <MailIcon />
-              </ListItemIcon>
-              <ListItemText primary="Drug Test Billing tests"/>
-              </ListItem>
-             <ListItem button >
-              <ListItemIcon>
-              <MailIcon />
-              </ListItemIcon>
-              <ListItemText primary="Locations/Faclities Files"/>
-              </ListItem>
-             </List>
+         </List>
         </div>
     )
 }

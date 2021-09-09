@@ -3,16 +3,16 @@ import React from 'react'
 import MailIcon from '@material-ui/icons/Mail';
 import {Link} from "react-router-dom"
 
-export default function SystemDictionary({handleTabChange}) {
+export default function ClientDictionarySlider() {
     return (
         <div>
-             <List>
-                 <Link to="/" onClick={(e)=>handleTabChange(121)} style={{ textDecoration: 'none',color:'black' }} >
+            <List>
+                 <Link style={{ textDecoration: 'none',color:'black' }} to="/client-dictionary">
              <ListItem  button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText   primary="Client Dictionary"/>
+              <ListItemText   primary="Add a new Record"/>
               </ListItem>
                  </Link>
                  <Link style={{ textDecoration: 'none',color:"black" }} to="/">
@@ -20,88 +20,82 @@ export default function SystemDictionary({handleTabChange}) {
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Test Dictionary"/>
+              <ListItemText primary="Update a record"/>
               </ListItem>
                  </Link>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Profile Dictionary"/>
+              <ListItemText primary="Read a record"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Test/Profile comments"/>
+              <ListItemText primary="Print Sorted by Name"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Canned comments"/>
+              <ListItemText primary="Print Sorted by Number"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Reports Format File"/>
+              <ListItemText primary="Print Sorted by Sales Group"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Worksheet setup"/>
+              <ListItemText primary="Clients w/ Activity for a Period"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Insurance Dictionary"/>
+              <ListItemText primary="Clients w/ Activity that location"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Laboratory Information"/>
+              <ListItemText primary="Print client's label"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Program Password File"/>
+              <ListItemText primary="Print client's prices"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="User/Tech Password"/>
+              <ListItemText primary="Print client's special prices"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Automated billing tests"/>
+              <ListItemText primary="Add Client Provider"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Special Billing Translation"/>
+              <ListItemText primary="Find Web Password"/>
               </ListItem>
              <ListItem button >
               <ListItemIcon>
               <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Drug Test Billing tests"/>
+              <ListItemText primary="Client Special profile List"/>
               </ListItem>
-             <ListItem button >
-              <ListItemIcon>
-              <MailIcon />
-              </ListItemIcon>
-              <ListItemText primary="Locations/Faclities Files"/>
-              </ListItem>
-             </List>
+         </List>
         </div>
     )
 }

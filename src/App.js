@@ -3,7 +3,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Header from "./components/header/index"
 import React from 'react';
 // import darkTheme from './theme';
-import { createTheme } from "@material-ui/core";
+import { createTheme, Paper } from "@material-ui/core";
 import {Switch,Route} from "react-router-dom"
 import {
     blueGrey,
@@ -43,12 +43,15 @@ function App() {
         <Header darkState={darkState} toggleDarkState={toggleDarkState} />
         {/* <LeftSlide /> */}
       <div className="App">
+      <Paper elevation={0} >
+
        <Switch>
          <Route exact path="/" >
            New Screen
          </Route>
          <Route  path="/client-dictionary" component={AddNewRecord} />
        </Switch>
+      </Paper>
       </div>
     </ThemeProvider>
   );
